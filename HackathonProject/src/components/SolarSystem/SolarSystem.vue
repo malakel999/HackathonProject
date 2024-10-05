@@ -72,7 +72,35 @@
   
       const ambientLight = new THREE.AmbientLight(0xffffff, 0);
       scene.add(ambientLight);
-  
+      //===============================================
+
+        const path_of_planets = [];
+function createLineLoopWithMesh(radius, color, width) {
+  const material = new THREE.LineBasicMaterial({
+    color: color,
+    linewidth: width,
+  });
+  const geometry = new THREE.BufferGeometry();
+  const lineLoopPoints = [];
+
+  // Calculate points for the circular path
+  const numSegments = 100; // Number of segments to create the circular path
+  for (let i = 0; i <= numSegments; i++) {
+    const angle = (i / numSegments) * Math.PI * 2;
+    const x = radius * Math.cos(angle);
+    const z = radius * Math.sin(angle);
+    lineLoopPoints.push(x, 0, z);
+  }
+
+  geometry.setAttribute(
+    "position",
+    new THREE.Float32BufferAttribute(lineLoopPoints, 3)
+  );
+  const lineLoop = new THREE.LineLoop(geometry, material);
+  scene.add(lineLoop);
+  path_of_planets.push(lineLoop);
+}
+      //=============================================
       const genratePlanet = (size, planetTexture, x, ring) => {
         const planetGeometry = new THREE.SphereGeometry(size, 50, 50);
         const planetMaterial = new THREE.MeshStandardMaterial({ map: planetTexture });
@@ -85,6 +113,7 @@
             map: ring.ringmat,
             side: THREE.DoubleSide,
           });
+          
           const ringMesh = new THREE.Mesh(ringGeo, ringMat);
           planetObj.add(ringMesh);
           ringMesh.position.set(x, 0, 0);
@@ -92,7 +121,11 @@
         }
         scene.add(planetObj);
         planetObj.add(planet);
-        return { planetObj, planet };
+        createLineLoopWithMesh(x, 0xffffff, 3);
+        return { 
+            planetObj: planetObj,
+            planet: planet, 
+        };
       };
   
       const planets = [
@@ -107,11 +140,30 @@
         { ...genratePlanet(2.8, plutoTexture, 216), rotaing_speed_around_sun: 0.0007, self_rotation_speed: 0.008 },
       ];
   
-      function animate() {
-        sun.rotateY(0.004);
+
+      var GUI = dat.gui.GUI;
+const gui = new GUI();
+const options = {
+  "Real view": true,
+  "Show path": true,
+  speed: 1,
+};
+gui.add(options, "Real view").onChange((e) => {
+  ambientLight.intensity = e ? 0 : 0.5;
+});
+gui.add(options, "Show path").onChange((e) => {
+  path_of_planets.forEach((dpath) => {
+    dpath.visible = e;
+  });
+});
+const maxSpeed = new URL(window.location.href).searchParams.get("ms")*1
+gui.add(options, "speed", 0, maxSpeed?maxSpeed:20);
+
+      function animate(time) {
+        sun.rotateY(options.speed * 0.004);
         planets.forEach(({ planetObj, planet, rotaing_speed_around_sun, self_rotation_speed }) => {
-          planetObj.rotateY(rotaing_speed_around_sun);
-          planet.rotateY(self_rotation_speed);
+            planetObj.rotateY(options.speed * rotaing_speed_around_sun);
+            planet.rotateY(options.speed * self_rotation_speed);
         });
         renderer.render(scene, camera);
       }
