@@ -1,13 +1,16 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
+    <div id="app">
+      <router-view></router-view>
+    </div>
+  </template>
   
-
-</template>
-
-<style scoped>
-
-</style>
+  <script>
+  export default {
+    name: 'App'
+  }
+  </script>
+  
+  <style>
+  /* Global styles */
+  </style>
+  
