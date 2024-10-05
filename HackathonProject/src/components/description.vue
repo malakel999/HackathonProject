@@ -118,13 +118,13 @@
           <div class="mt-12">
             <div class="carousel rounded-box">
               <div class="carousel-item">
-                <img src="C:\Users\HP EliteBooK\HackathonProject\HackathonProject\src\assets\images\carousel4.jpg" alt="Image 1" class="w-full max-w-xs object-cover rounded-lg" />
+                <img src="../assets/images/carousel4.jpg" alt="Image 1" class="w-full max-w-xs object-cover rounded-lg" />
               </div>
               <div class="carousel-item">
-                <img src="C:\Users\HP EliteBooK\HackathonProject\HackathonProject\src\assets\images\carousel5jpg.jpg" alt="Image 2" class="w-full max-w-xs object-cover rounded-lg" />
+                <img src="..\assets\images\carousel5jpg.jpg" alt="Image 2" class="w-full max-w-xs object-cover rounded-lg" />
               </div>
               <div class="carousel-item">
-                <img src="C:\Users\HP EliteBooK\HackathonProject\HackathonProject\src\assets\images\carousel2.jpeg" alt="Image 3" class="w-full max-w-xs object-cover rounded-lg" />
+                <img src="..\assets\images\carousel2.jpeg" alt="Image 3" class="w-full max-w-xs object-cover rounded-lg" />
               </div>
             </div>
           </div>
