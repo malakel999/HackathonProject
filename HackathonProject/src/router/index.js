@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import description from '@/components/description.vue'
-
+import SolarSystem from '@/components/SolarSystem.vue'
 const routes = [
   // {
   //   path: '/home',
@@ -11,8 +11,14 @@ const routes = [
   {
     path: '/',
     name: 'description',
-    component: description
+    component: description,
+
   },
+  {
+    path: '/SolarSystem',
+  name: 'SolarSystem',
+  component: SolarSystem,
+  }
   // {
   //   path: '/about',
   //   name: 'about',

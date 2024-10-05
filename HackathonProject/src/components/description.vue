@@ -140,18 +140,29 @@
           Discover the planets, moons, and fascinating features of our solar system. Our visual guide brings the solar system to life, showcasing the incredible diversity of celestial bodies.
         </p>
         <div class="mt-8">
-          <a href="#" class="text-blue-500 hover:text-blue-600 font-medium">Start your exploration <span class="ml-2">&#8594;</span></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600 font-medium" >
+            <router-link to="SolarSystem">
+            Start your exploration 
+            </router-link>
+            
+            <span class="ml-2">&#8594;</span></a>
         </div>
       </div>
     </section>
 
   </div>
 </div>
+
 </template>
 
 <script>
+import SolarSystem from './SolarSystem.vue';
 export default {
-  name: 'description'
+  name: 'description',
+  components: { 
+    SolarSystem
+  }
+
 }
 </script>
 
