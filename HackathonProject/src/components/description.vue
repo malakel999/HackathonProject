@@ -154,14 +154,14 @@
             </router-link>
             
             <span style="margin-left: 0%;">&#8594;</span></a>
-            <div id="game" class="mt-1 bg-black p-6 rounded-lg shadow-lg">
+            <!-- <div id="game" class="mt-1 bg-black p-6 rounded-lg shadow-lg">
             
             <h2 class="text-4xl font-bold text-white">Games</h2>
             
                 <p class="mt-4 text-gray-700">
                   <game/>
                 </p>
-        </div>
+        </div> -->
             <div class="mt-1 bg-black p-6 rounded-lg shadow-lg">
             
             <h2 class="text-4xl font-bold text-white">Discover Near-Earth Objects and Asteroids</h2>
