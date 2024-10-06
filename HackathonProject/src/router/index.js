@@ -1,23 +1,76 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import description from '@/components/description.vue'
+import SolarSystem from '@/components/SolarSystem.vue'
+import vis2d  from '@/components/vis2d.vue'
+import quiz from '@/components/quiz.vue'
+import ftr from '@/components/ftr.vue'
+import game from '@/components/game.vue'
+import prediction from '@/components/prediction.vue'
+import CosmicGaming from '@/components/CosmicGaming.vue'
+import CosmicQuiz from '@/components/CosmicQuiz.vue'
+const routes = [
+  // {
+  //   path: '/home',
+  //   name: 'home',
+  //   component: HomeView
+  // },
+  {
+    path: '/',
+    name: 'description',
+    component: description,
+    children:[{
+      path: '/vis2d',
+      name :'vis2d',
+      component: vis2d,
+    },
+    {
+      path: '/quiz',
+      name :'quiz',
+      component: quiz,
+    },{
+      path: '/prediction',
+      name :'prediction',
+      component: prediction,
+    },
+    {
+      path: '/game',
+      name :'game',
+      component: game,
+    },
+    {
+      path: '/ftr',
+      name :'ftr',
+      component: ftr,
+    }
+  ]
+
+  },
+  {
+    path: '/SolarSystem',
+    name: 'SolarSystem',
+    component: SolarSystem,
+  },
+  {
+    path: '/CosmicGaming',
+  name: 'CosmicGaming',
+  component: CosmicGaming,
+  },
+  {
+    path: '/CosmicQuiz',
+    name: 'CosmicQuiz',
+    component: CosmicQuiz,
+  }
+  // {
+  //   path: '/about',
+  //   name: 'about',
+  //   component: () => import('../views/AboutView.vue')
+  // }
+]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
-  ]
+  routes
 })
 
 export default router
