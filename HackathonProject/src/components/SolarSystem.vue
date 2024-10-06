@@ -1,4 +1,3 @@
-
 <template>
   
   <!-- Bind the container to the solarSystemContainer ref -->

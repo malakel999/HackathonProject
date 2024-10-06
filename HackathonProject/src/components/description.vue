@@ -2,7 +2,7 @@
   <div>
   <div class="w-screen h-screen flex flex-col items-center bg-black">
     <!-- Header Section -->
-    <header class="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border border-gray-100 bg-white/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
+    <header class="mt-5 inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-md border border-gray-100 bg-white/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg">
       <div class="px-4">
         <div class="flex items-center justify-between">
           <div class="flex shrink-0">
@@ -10,9 +10,9 @@
               <p class="sr-only">Website Title</p>
             </a>
             <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 width="40px" height="40px" viewBox="0 0 48.625 48.625"
-	 xml:space="preserve">
-<g>
+                  width="40px" height="40px" viewBox="0 0 48.625 48.625"
+                  xml:space="preserve">
+                <g>
 	<g>
 		<polygon points="35.432,10.815 35.479,11.176 34.938,11.288 34.866,12.057 35.514,12.057 36.376,11.974 36.821,11.445 
 			36.348,11.261 36.089,10.963 35.7,10.333 35.514,9.442 34.783,9.591 34.578,9.905 34.578,10.259 34.93,10.5 		"/>
@@ -77,7 +77,9 @@
             <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900" href="#aboutUs">How it works</a>
             <!-- Updated href to use anchor -->
             <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900" href="#solar-system">Solar system</a>
+            <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900" href="#game">Games</a>
             <a class="inline-block rounded-lg px-2 py-1 text-sm font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900" href="#aboutUs">About Us</a>
+
           </div>
           <div class="flex items-center justify-end gap-3">
             <a class="hidden items-center justify-center rounded-xl bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 transition-all duration-150 hover:bg-gray-50 sm:inline-flex" href="/login">Sign in</a>
@@ -88,7 +90,7 @@
     </header>
 
     <!-- Main Section -->
-    <section id="aboutUs">
+    <section id="aboutUs" class="bg-black">
       <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           <div class="max-w-lg">
@@ -133,8 +135,8 @@
     </section>
 
     <!-- New Section/Container with id for scrolling -->
-    <section id="solar-system" class="w-full py-14 bg-black">
-      <div class="container mx-auto text-center">
+    <section id="solar-system" class="w-full  py-14 bg-black">
+      <div class="container mx-auto  text-center">
         <h2 class="text-4xl font-bold text-white">Explore Our Solar System</h2>
         <p class="mt-4 text-lg text-gray-400">
  Discover the planets, moons, and fascinating features of our solar system. Our visual guide brings the solar system to life, showcasing the incredible diversity of celestial bodies.
@@ -146,7 +148,7 @@
             </router-link>
             
             <span style="margin-left: 0%;">&#8594;</span></a>
-            <div class="mt-1 bg-black p-6 rounded-lg shadow-lg">
+            <div id="game" class="mt-1 bg-black p-6 rounded-lg shadow-lg">
             
             <h2 class="text-4xl font-bold text-white">Games</h2>
             
@@ -158,8 +160,10 @@
             
             <h2 class="text-4xl font-bold text-white">Discover Near-Earth Objects and Asteroids</h2>
             <p class="mt-4 text-lg text-gray-400">
+             <spam class="text-blue-600">NEOs (Near-Earth Objects)</spam>  are asteroids or comets whose orbits bring them close to Earth. They are monitored due to the potential risk of collision, which could cause significant damage. NEOs include Near-Earth Asteroids (NEAs) and Near-Earth Comets (NECs).            </p>
+                <p class="mt-4 text-gray-700"><p class="mt-4 text-lg text-gray-400">
               Explore the intriguing world of Near-Earth Objects (NEOs) and asteroids. Learn how they move through space, their potential impact on Earth, and test your knowledge with a quick quiz. Ready to explore the cosmos?        </p>
-                <p class="mt-4 text-gray-700">
+                <p class="mt-4 text-gray-700"></p>
                   <vis2d/>
                 </p>
         </div>
@@ -186,6 +190,28 @@
                     </summary>
                     <quiz/>
                 </details>
+            </div>
+        </div>
+        <div class="mt-1 bg-black p-6 rounded-lg shadow-lg">
+<!--             
+            <h2 class="text-4xl font-bold text-white">Discover Near-Earth Objects and Asteroids</h2>
+            <p class="mt-4  text-lg text-gray-400">
+              Explore the intriguing world of Near-Earth Objects (NEOs) and asteroids. Learn how they move through space, their potential impact on Earth, and test your knowledge with a quick quiz. Ready to explore the cosmos?        </p> -->
+                <p class="mt-4 mb-8 text-2xl text-gray-400">
+                  Try out our AI-powered prediction model, tracking Near-Earth Objects (NEOs) by name and forecasting their trajectories over the years, offering real-time insights into their future movements.     </p>
+                <div class="py-5 bg-black rounded-lg shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_15px_#08f,0_0_30px_#08f]">
+                <div class="group ">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+                        <!-- <span class="transition group-open:rotate-180">
+                                <svg fill="none" height="24" shape-rendering="geometricPrecision"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                                    <path d="M6 9l6 6 6-6"></path>
+                                </svg>
+                            </span> -->
+                    </summary>
+                    <prediction/>
+                  </div>
             </div>
         </div>
         <div class="mt-1 bg-black p-6 rounded-lg shadow-lg">
@@ -269,6 +295,7 @@ import vis2d from './vis2d.vue';
 import quiz from './quiz.vue';
 import ftr from './ftr.vue';
 import game from './game.vue';
+import prediction from './prediction.vue'
 export default {
   name: 'description',
   components: { 
@@ -276,7 +303,8 @@ export default {
     vis2d,
     quiz,
     ftr,
-    game
+    game,
+    prediction
   }
 
 }

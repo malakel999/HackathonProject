@@ -6,6 +6,7 @@ import vis2d  from '@/components/vis2d.vue'
 import quiz from '@/components/quiz.vue'
 import ftr from '@/components/ftr.vue'
 import game from '@/components/game.vue'
+import prediction from '@/components/prediction.vue'
 const routes = [
   // {
   //   path: '/home',
@@ -25,6 +26,10 @@ const routes = [
       path: '/quiz',
       name :'quiz',
       component: quiz,
+    },{
+      path: '/prediction',
+      name :'prediction',
+      component: prediction,
     },
     {
       path: '/game',
