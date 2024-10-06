@@ -10,8 +10,11 @@
     "test:unit": "vitest"
   },
   "dependencies": {
+    "@danielblagy/three-mmi": "^1.0.0",
     "axios": "^1.7.7",
     "daisyui": "^4.12.12",
+    "dat.gui": "^0.7.9",
+    "owl.carousel": "^2.3.4",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3",
     "vuex": "^4.1.0"
