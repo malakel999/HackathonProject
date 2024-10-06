@@ -15,9 +15,7 @@ To make learning more engaging, we incorporated a 2D asteroid defense game, deve
 # Installation Instructions
 
 To run the web app on your local host, you need to have **Node.js**, **Vue.js**, and **Vite** installed. Follow the steps below:
-
 ### Step 1: Install Node.js
-
 ### Step 2: Install Vue.js and Vite
-
-### Step 3: Run the Application
+### Step 3: Clone the project
+### Step 4: Run the Application
