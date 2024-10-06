@@ -143,17 +143,17 @@
     <!-- New Section/Container with id for scrolling -->
     <section id="solar-system" class="w-full  py-14 bg-black">
       <div class="container mx-auto  text-center">
-        <h2 class="text-4xl font-bold text-white">Explore Our Solar System</h2>
-        <p class="mt-4 text-lg text-gray-400">
+        <!-- <h2 class="text-4xl font-bold text-white">Explore Our Solar System</h2> -->
+        <!-- <p class="mt-4 text-lg text-gray-400">
  Discover the planets, moons, and fascinating features of our solar system. Our visual guide brings the solar system to life, showcasing the incredible diversity of celestial bodies.
-        </p>
+        </p> -->
         <div class="mt-8">
-          <a href="#" class="text-blue-500 hover:text-blue-600 font-medium" >
+          <!-- <a href="#" class="text-blue-500 hover:text-blue-600 font-medium" >
             <router-link to="SolarSystem">
             Start your exploration 
             </router-link>
             
-            <span style="margin-left: 0%;">&#8594;</span></a>
+            <span style="margin-left: 0%;">&#8594;</span></a> -->
             <!-- <div id="game" class="mt-1 bg-black p-6 rounded-lg shadow-lg">
             
             <h2 class="text-4xl font-bold text-white">Games</h2>
