@@ -1,12 +1,11 @@
 
 <template>
-  
-  <!-- Bind the container to the solarSystemContainer ref -->
-  <div id="solar-system" ref="solarSystemContainer"></div>
-  <Test/>
   <div>
     <iframe src="../../public/casseroll/index.html" width="800" height="500" class="no-border" border="none"></iframe>
   </div>
+  <!-- Bind the container to the solarSystemContainer ref -->
+  <div id="solar-system" ref="solarSystemContainer"></div>
+  
 </template>
 
 <script setup>

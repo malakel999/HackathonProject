@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import description from '@/components/description.vue'
 import SolarSystem from '@/components/SolarSystem.vue'
+import CosmicGaming from '@/components/CosmicGaming.vue'
+import CosmicQuiz from '@/components/CosmicQuiz.vue'
 // import Test from "@/components/icons/Test.vue"
 const routes = [
   // {
@@ -20,16 +22,16 @@ const routes = [
   name: 'SolarSystem',
   component: SolarSystem,
   },
-  // {
-  //   path: '/Test',
-  // name: 'Test',
-  // component: Test,
-  // },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: () => import('../views/AboutView.vue')
-  // }
+  {
+    path: '/CosmicGaming',
+  name: 'CosmicGaming',
+  component: CosmicGaming,
+  },
+  {
+    path: '/CosmicQuiz',
+    name: 'CosmicQuiz',
+    component: CosmicQuiz,
+  }
 ]
 
 const router = createRouter({
