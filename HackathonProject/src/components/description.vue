@@ -97,22 +97,28 @@
             <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Are you prepared to explore the universe?</h2>
             <p class="mt-4 text-gray-400 text-lg">Join us on an extraordinary journey beyond the stars, where the mysteries of the universe await. Dive into the wonders of the cosmos and explore the infinite possibilities that lie ahead!</p>
             <div class="mt-8">
-              <a href="#" class="text-blue-500 hover:text-blue-600 font-medium">Learn more about us <span class="ml-2">&#8594;</span></a>
+              Learn more ...
             </div>
-            <div class="mt-3 grid grid-cols-3 gap-3">
-              <div>
-                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-gray-400 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-gray-400 hover:bg-gray-50">
-                  <img class="h-5 w-5" src="https://www.svgrepo.com/show/512120/facebook-176.svg" alt="">
+            <div class="mt-6 grid grid-cols-3 gap-3">
+              <div class="perso">
+                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-blue-400 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-red-150 hover:bg-gray-50">
+                  <router-link to="SolarSystem">
+                  <b>Start your exploration</b> 
+                  </router-link>
                 </a>
               </div>
-              <div>
-                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-gray-400 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-gray-400 hover:bg-gray-50">
-                  <img class="h-5 w-5" src="https://www.svgrepo.com/show/513008/twitter-154.svg" alt="">
+              <div class="perso">
+                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-blue-400 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-red-150 hover:bg-gray-50">
+                  <router-link to="CosmicGaming">
+                  <b>Lets Gaming</b> 
+                  </router-link>
                 </a>
-              </div>
+              </div class="perso">
               <div>
-                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-gray-400 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-gray-400 hover:bg-gray-50">
-                  <img class="h-6 w-6" src="https://www.svgrepo.com/show/506498/google.svg" alt="">
+                <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-blue-400 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-red-150 hover:bg-gray-50">
+                  <router-link to="CosmicQuiz">
+                  <b>About NEOs</b> 
+                  </router-link>
                 </a>
               </div>
             </div>
@@ -295,7 +301,9 @@ import vis2d from './vis2d.vue';
 import quiz from './quiz.vue';
 import ftr from './ftr.vue';
 import game from './game.vue';
-import prediction from './prediction.vue'
+import prediction from './prediction.vue';
+import CosmicGaming from './CosmicGaming.vue';
+import CosmicQuiz from './CosmicQuiz.vue';
 export default {
   name: 'description',
   components: { 
@@ -304,7 +312,10 @@ export default {
     quiz,
     ftr,
     game,
-    prediction
+    prediction,
+    SolarSystem,
+    CosmicGaming,
+    CosmicQuiz
   }
 
 }
@@ -312,10 +323,12 @@ export default {
 
 <style scoped>
 html, body {
-  background-color: black;
+  /* background-color: black; */
+  background-image: url("../../public/image/stars.jpg");
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
 }
+
 </style>

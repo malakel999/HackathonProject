@@ -7,6 +7,8 @@ import quiz from '@/components/quiz.vue'
 import ftr from '@/components/ftr.vue'
 import game from '@/components/game.vue'
 import prediction from '@/components/prediction.vue'
+import CosmicGaming from '@/components/CosmicGaming.vue'
+import CosmicQuiz from '@/components/CosmicQuiz.vue'
 const routes = [
   // {
   //   path: '/home',
@@ -48,6 +50,16 @@ const routes = [
     path: '/SolarSystem',
     name: 'SolarSystem',
     component: SolarSystem,
+  },
+  {
+    path: '/CosmicGaming',
+  name: 'CosmicGaming',
+  component: CosmicGaming,
+  },
+  {
+    path: '/CosmicQuiz',
+    name: 'CosmicQuiz',
+    component: CosmicQuiz,
   }
   // {
   //   path: '/about',
